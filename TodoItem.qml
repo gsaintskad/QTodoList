@@ -27,7 +27,8 @@ Rectangle{
         MButton{
             buttonText: "Done"
             onBtnHandler: {
-                root.destroy(1000)
+                //root.destroy(1000)
+                root.destroy(0)
             }
         }
     }

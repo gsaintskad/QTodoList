@@ -2,15 +2,19 @@ import QtQuick
 import QtQuick.Controls
 Row{
     id: creatorLayout
-    height: 100
+    height: 50
+    width:parent.width
     signal addRequestedTodoItem(string todoText)
-    TextInput{
+    TextField{
         id:input
+        height:parent.height
         width:(parent.width-1*50)*3/4
-
+        font.pixelSize: 15
+        padding: 8
     }
     MButton{
         buttonText: "Add"
+        height:parent.height
         onBtnHandler:{
             const text =input.text.trim();
 
@@ -22,6 +26,7 @@ Row{
     }
     MButton{
         buttonText: "Clear"
+        height:parent.height
         onBtnHandler:{
             const {text}=input;
             input.text="";
