@@ -18,9 +18,18 @@ Rectangle{
     Row{
         height: parent.height
         anchors.right: parent.right
-        MButton{}
-        MButton{}
-        MButton{}
+        MButton{
+            buttonText: "important"
+            onBtnHandler:{
+                contentText.text+='!!!';
+            }
+        }
+        MButton{
+            buttonText: "Done"
+            onBtnHandler: {
+                root.destroy(1000)
+            }
+        }
     }
 
     Component.onCompleted: {
