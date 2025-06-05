@@ -17,6 +17,10 @@ qt_add_qml_module(appTodoList
     VERSION 1.0
     QML_FILES
         Main.qml
+        QML_FILES TodoItem.qml
+        RESOURCES
+        QML_FILES TodoCreator.qml
+        QML_FILES MButton.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
